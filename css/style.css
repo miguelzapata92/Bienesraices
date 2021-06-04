@@ -1,10 +1,13 @@
+html {
+    font-size: 62.5%; /* Reset para REMS - 62.5% = 10 px de 16 px */
+}
 body {
     font-family: 'Lato', sans-serif;
 }
 
 /**Globlaes**/
 .contenedor {
-    max-width: 1100px;
+    max-width: 110rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -16,21 +19,21 @@ body {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    min-height: 600px;     
+    min-height: 60rem;     
     }
 
 .barra {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 3rem;
     align-items: center;
 }
 
 .navegacion a{
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    margin-right: 20px;
+    font-size: 1.8rem; /*18 px*/
+    margin-right: 2px;
 }
 .navegacion a:last-of-type{
     margin-right: 0;
