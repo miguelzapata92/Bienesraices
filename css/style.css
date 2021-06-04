@@ -6,12 +6,29 @@ body {
 }
 
 /**Globlaes**/
+
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
 .contenedor {
-    max-width: 110rem;
+    max-width: 120rem;
     margin-left: auto;
     margin-right: auto;
 }
-
 
 /*Header*/
 .site-header.inicio {
@@ -20,7 +37,21 @@ body {
     background-size: cover;
     height: 100vh;
     min-height: 60rem;     
-    }
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido-header h1 {
+    color: white;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 6rem;
+}
 
 .barra {
     display: flex;
@@ -29,12 +60,17 @@ body {
     align-items: center;
 }
 
-.navegacion a{
+
+.navegacion a {
     color: white;
     text-decoration: none;
     font-size: 1.8rem; /*18 px*/
-    margin-right: 2px;
+    margin-right: 2rem;
+    max-height: 60rem;
+    ;
+    
 }
-.navegacion a:last-of-type{
+.navegacion a:last-of-type {
     margin-right: 0;
 }
+
