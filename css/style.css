@@ -82,6 +82,12 @@ h4 {
 
 
 /*Header*/
+
+.site-header {
+    background-color: #333333;
+    padding: 1rem 0rem 3rem 0rem;
+}
+
 .site-header.inicio {
     background-image: url(../img/header.jpg);
     background-position: center;
@@ -296,4 +302,23 @@ h4 {
 .copyright {
     margin: 0;
     color: #FFFFFF;
+}
+
+/** Páginas Internas **/
+
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+}
+
+.texto-nosotros blockquote {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0;
+    padding: 0rem 0rem 3rem 0rem;
+}
+
+.parrafos-nosotros {
+    text-align: justify;
 }
