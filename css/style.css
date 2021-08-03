@@ -1,9 +1,12 @@
 html {
-    font-size: 62.5%; /* Reset para REMS - 62.5% = 10 px de 16 px */
+    font-size: 62.5%;
+    /* Reset para REMS - 62.5% = 10 px de 16 px */
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -13,7 +16,9 @@ body {
     line-height: 2;
 }
 
+
 /**Globlaes**/
+
 img {
     max-width: 100%;
 }
@@ -35,13 +40,14 @@ h4 {
 }
 
 .contenedor {
+    width: 95%;
     max-width: 120rem;
     margin-left: auto;
     margin-right: auto;
 }
+
+
 /** Utilidades */
-
-
 
 .seccion {
     margin-top: 2rem;
@@ -59,22 +65,35 @@ h4 {
 .d-block {
     display: block!important;
 }
+
+
 /** Botones **/
 
-.boton{
-    font-size: 1.6rem;
+.boton {
+    font-size: 1.8rem;
     color: #ffff;
     font-weight: 700;
     padding: 1rem 3rem;
-    display: inline-block;
     margin-top: 3rem;
+    display: inline-block;
     text-align: center;
     text-decoration: none;
     border: none;
+    display: block;
+    flex: 0 0 100%;
 }
-.boton:hover{
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.boton:hover {
     cursor: pointer;
 }
+
 .boton-amarillo {
     background: #E08709;
 }
@@ -86,6 +105,8 @@ h4 {
 .contenido-centrado {
     max-width: 800px;
 }
+
+
 /*Header*/
 
 .site-header {
@@ -98,7 +119,7 @@ h4 {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    min-height: 60rem;     
+    min-height: 60rem;
 }
 
 .contenido-header {
@@ -106,6 +127,13 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: left;
+    }
 }
 
 .contenido-header h1 {
@@ -116,52 +144,75 @@ h4 {
 }
 
 .barra {
-    display: flex;
-    justify-content: space-between;
     padding-top: 3rem;
-    align-items: center;
 }
 
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 
 .navegacion a {
     color: white;
     text-decoration: none;
-    font-size: 1.8rem; /*18 px*/
-    margin-right: 2rem;
+    font-size: 2.2rem;
     max-height: 60rem;
-    ;
-    
+    display: block;
 }
-.navegacion a:last-of-type {
-    margin-right: 0;
+
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1.8rem;
+    }
+    .navegacion a:last-of-type {
+        margin-right: 0;
+    }
 }
+
+
 /** Iconos Nosotros**/
-.iconos-nosotros {
-    display: flex;
-    justify-content: space-between;
+
+@media (min-width: 768px) {
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
 }
+
 .encabezado-nosotros {
     font-weight: 300;
     text-align: center;
 }
 
-.iconos{
-    flex-basis: calc(33.3% - 1rem);
+.iconos {
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .iconos {
+        flex-basis: calc(33.3% - 1rem);
+    }
 }
 
 .iconos h3 {
     text-transform: uppercase;
 }
 
+
 /** Anuncios **/
+
 .contenedor-anuncios {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
 }
 
-.anuncio{
+.anuncio {
     flex-basis: calc(33.3% - 1rem);
     border: 1px solid #B5B5B5;
     background: #f5f5f5;
@@ -172,7 +223,7 @@ h4 {
 }
 
 .contenedor-anuncios h3 {
-    margin: 0px;  
+    margin: 0px;
 }
 
 .contenedor-anuncios p {
@@ -186,8 +237,14 @@ h4 {
 
 .ver-todas {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center
+}
 
+@media (min-width: 768px) {
+    .ver-todas {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 .iconos-caracteristicas {
@@ -203,7 +260,7 @@ h4 {
     display: flex;
 }
 
-.iconos-caracteristicas li img{
+.iconos-caracteristicas li img {
     margin-right: 2rem;
 }
 
@@ -219,7 +276,7 @@ h4 {
     align-items: center;
 }
 
-.contenido-contacto{
+.contenido-contacto {
     flex: 1;
     color: #FFFFFF;
 }
@@ -228,7 +285,9 @@ h4 {
     font-size: 1.8rem;
 }
 
+
 /** Sección inferior **/
+
 .seccion-inferior {
     display: flex;
     justify-content: space-between;
@@ -238,7 +297,7 @@ h4 {
     flex-basis: 60%;
 }
 
-.seccion-inferior .testimoniales{
+.seccion-inferior .testimoniales {
     flex-basis: calc(40% - 2rem);
 }
 
@@ -248,7 +307,7 @@ h4 {
     margin-bottom: 2rem;
 }
 
-.entrada-blog:last-of-type{
+.entrada-blog:last-of-type {
     margin-bottom: 0;
 }
 
@@ -256,7 +315,7 @@ h4 {
     flex-basis: 40%;
 }
 
-.entrada-blog .texto-entrada{
+.entrada-blog .texto-entrada {
     flex-basis: calc(60% - 3rem);
 }
 
@@ -265,7 +324,7 @@ h4 {
     line-height: 1.4;
 }
 
-.texto-entrada a{
+.texto-entrada a {
     color: black;
     text-decoration: none;
 }
@@ -279,9 +338,10 @@ h4 {
     margin-top: 1rem;
 }
 
-.texto-entrada span{
+.texto-entrada span {
     color: #E08709;
 }
+
 
 /** Testimoniales **/
 
@@ -292,11 +352,13 @@ h4 {
     color: #FFFFFF;
     padding: 2rem;
 }
-.testimonial p{
+
+.testimonial p {
     text-align: right;
 }
-.testimonial blockquote::before{
-    content:'';
+
+.testimonial blockquote::before {
+    content: '';
     background-image: url(..//img/comilla.svg);
     width: 4rem;
     height: 4rem;
@@ -304,11 +366,12 @@ h4 {
     left: -2rem;
 }
 
-.testimonial blockquote{
+.testimonial blockquote {
     padding-left: 5rem;
     position: relative;
     font-weight: 300;
 }
+
 
 /** Footer **/
 
@@ -317,16 +380,17 @@ h4 {
     margin: 0;
 }
 
-.contenedor-footer{
+.contenedor-footer {
     padding: 3rem 0;
     display: flex;
     justify-content: space-between;
-    }
+}
 
 .copyright {
     margin: 0;
     color: #FFFFFF;
 }
+
 
 /** Páginas Internas **/
 
@@ -353,7 +417,9 @@ h4 {
     align-items: center;
 }
 
+
 /**Contacto**/
+
 legend {
     font-size: 2.5rem;
     color: #333333;
@@ -374,7 +440,8 @@ textarea {
     border: none;
     border-radius: 1rem;
 }
-input[type="radio"]{
+
+input[type="radio"] {
     width: auto;
 }
 
@@ -387,7 +454,7 @@ select {
     border-radius: 1rem;
 }
 
-textarea{
+textarea {
     height: 20rem;
 }
 
@@ -396,9 +463,9 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
-.contacto p{
+
+.contacto p {
     font-size: 1.5rem;
     margin: 2rem 0 0 0;
 }
